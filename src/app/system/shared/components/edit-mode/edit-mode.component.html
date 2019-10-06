@@ -1,0 +1,32 @@
+<div class="edit-mode">
+  <div class="app-wrapper" *ngIf="component != 'general'">
+    <div class="edit-mode__chosen-el">Выбрано: <span class="chosen-el__count">{{ countSelectedItems }} {{ createWord(countSelectedItems) }}</span></div>
+    <div *ngIf=" countSelectedItems == 0 " class="none-chosen">
+      <a href="" class="edit-mode__add-el"><i class="material-icons">add_circle</i></a>
+    </div>
+    <div *ngIf=" countSelectedItems == 1 " class="one-chosen">
+      <div class="tools">
+        <a [routerLink]="['modal']" class="tools__delete">
+          <i class="material-icons">delete</i>
+        </a>
+        <a href="" class="tools__edit"><i class="material-icons">edit</i></a>
+      </div>
+      <a (click)="cancelSelectionItems()" class="close-button">
+        <i class="material-icons">close</i>
+      </a>
+    </div>
+    <div *ngIf=" countSelectedItems > 1 " class="one-chosen">
+      <div class="tools">
+        <a [routerLink]="['modal']" class="tools__delete">
+          <i class="material-icons">delete</i>
+        </a>
+      </div>
+      <a (click)="cancelSelectionItems()" class="close-button">
+        <i class="material-icons">close</i>
+      </a>
+    </div>
+    <!--<div *ngIf=" countSelectedItems > 1"> Больше идницы</div>-->
+  </div>
+
+
+</div>

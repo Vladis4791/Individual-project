@@ -1,0 +1,19 @@
+@import "partials/params";
+@import "partials/mixins";
+@import "~material-design-icons/iconfont/material-icons.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+html, body {
+  @include clear;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include clear;
+}
+
+a {
+  text-decoration: none;
+}
+

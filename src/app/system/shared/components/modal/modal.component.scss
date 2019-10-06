@@ -1,0 +1,204 @@
+@import "../../../../../styles/partials/params";
+@import "../../../../../styles/partials/mixins";
+
+.modal-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.modal-window {
+
+  border-radius: 40px;
+  background-color: #fff;
+  width: 100%;
+  height: $modal-height;
+
+  &__header {
+
+    background-color: $theme-color;
+    height: $nav-height - 2vh;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    @include flex-space-between;
+
+    .title, i {
+      font-size: 1.2em;
+    }
+
+    .modal-wrapper {
+      color: #fff;
+      @include flex-space-between;
+    }
+
+  }
+
+  &__body {
+
+    color: $font-color;
+    height: $modal-height - 2 * ($nav-height - 2vh);
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+
+    .remove {
+
+    }
+
+    .create {
+
+      margin-top: -10vh;
+
+      input {
+        outline: none;
+        background-color: white;
+        border-radius: 10px;
+        border: 2px solid $input-color-border;
+        color: $font-color;
+      }
+
+      @include flex-space-between(top);
+
+      &__name {
+
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+
+        .daily-task-name-label {
+
+          font-size: 1.1em;
+          margin: 0;
+
+        }
+
+        #daily-task-name {
+          width: 100%;
+          margin-top: 3vh;
+          padding: 10px;
+          }
+
+        #daily-task-name::-webkit-input-placeholder {
+          color: $input-color-border;
+
+        }
+
+      }
+
+      &__time {
+
+        width: 50%;
+
+        .title {
+          color: $font-color;
+          font-size: 1.1em;
+          margin-bottom: 3vh;
+        }
+
+        input {
+          display: none;
+        }
+
+        #single-time-date {
+          display: block;
+        }
+
+        #double-time-dates {
+          display: none;
+        }
+
+        .formats {
+          background-color: $format-time-box-color;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 2% 4%;
+          border-radius: 10px;
+
+          .time-format {
+            background: #fff;
+            padding: 2% 4%;
+            border-radius: 10px;
+            border: 0;
+          }
+
+          input[type="radio"]:checked + label  {
+            background-color: #238651;
+            color: #fff;
+          }
+
+        }
+
+        .formats input[type="radio"]:checked + .write-time {
+          //display: block !important;
+          background-color: red;
+        }
+
+        .write-time {
+
+        }
+
+      }
+
+    }
+
+  }
+
+  &__footer {
+
+    display: flex;
+    align-items: center;
+    height: $nav-height - 2vh;
+
+    .not-ask-anymore {
+
+      @include flex-space-between;
+
+      p {
+        color: $font-color;
+        margin-left: 10px;
+      }
+
+    }
+
+    .modal-wrapper {
+
+      height: inherit;
+      @include flex-space-between;
+
+
+    }
+
+    .button-groups {
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+      height: inherit;
+
+      .cancel-button {
+
+        background-color: $cancel-button-color;
+        border: none;
+        height: 80%;
+        border-radius: 10px;
+        width: 20%;
+        color: $cancel-button-text-color;
+        font-weight: bold;
+      }
+
+      .action-button {
+
+        background-color: $theme-color;
+        border: none;
+        height: 80%;
+        border-radius: 10px;
+        margin-right: 10px;
+        width: 20%;
+        color: #fff;
+        font-weight: bold;
+      }
+
+    }
+
+  }
+
+}

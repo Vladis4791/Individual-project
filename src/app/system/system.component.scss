@@ -1,0 +1,22 @@
+@import "../../styles/partials/params";
+@import "../../styles/partials/mixins";
+
+
+.system:after {
+  content: " "; /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.app-part {
+  height: 100vh - $nav-height - $mode-edit-height;
+  background-color: #dde8ff;
+  overflow-y: scroll;
+}
+
+.view-window {
+  width: 100vw - $sidebar-width;
+  float: right;
+}

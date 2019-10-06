@@ -1,0 +1,30 @@
+<div class="general-view">
+  <div class="daily-activity">
+    <button class="general-buttons daily-activity__button" type="button" data-toggle="collapse" data-target="#daily-activity" aria-expanded="false" aria-controls="daily-activity">
+      Ежедневные занятия
+      <span class="count">5</span>
+    </button>
+    <div class="collapse" id="daily-activity">
+      <div class="card card-body">
+        <app-item [componentName]="'daily-activity'"></app-item>
+        <app-item [componentName]="'daily-activity'"></app-item>
+      </div>
+    </div>
+  </div>
+  <div class="notes">
+    <button class="general-buttons notes__button" type="button" data-toggle="collapse" data-target="#notes" aria-expanded="false" aria-controls="notes">
+      Заметки
+      <span class="count">10</span>
+    </button>
+    <div class="collapse" id="notes">
+      <div class="card card-body">
+        <app-item [componentName]="'notes'"></app-item>
+        <app-item [componentName]="'notes'"></app-item>
+        <app-item [componentName]="'notes'"></app-item>
+        <app-item [componentName]="'notes'"></app-item>
+      </div>
+    </div>
+  </div>
+  <!--<div class="daily-activity"></div>-->
+</div>
+

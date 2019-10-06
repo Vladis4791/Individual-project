@@ -1,0 +1,38 @@
+@import "../../../../../styles/partials/params";
+@import "../../../../../styles/partials/mixins";
+
+.sidebar {
+
+  @include clear;
+  background-color: $background-color;
+  width: $sidebar-width;
+  height: 100vh - $nav-height;
+  float: left;
+
+  &__items {
+
+    @include clean-list;
+
+    li  {
+      padding: 20px 30px 20px 20px;
+      display: flex;
+      justify-content: flex-end;
+      a {
+        color: $font-color;
+        font-size: 1.1rem;
+      }
+
+    }
+
+    li.active {
+      background-color: $theme-color;
+      border-top: 1px solid $font-color;
+
+      a {
+        color: white;
+      }
+    }
+
+  }
+
+}

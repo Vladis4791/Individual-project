@@ -1,0 +1,96 @@
+@import "../../../styles/partials/params";
+@import "../../../styles/partials/mixins";
+
+$item-height: $nav-height;
+
+
+
+.notes {
+  display: flex;
+}
+
+//.item {
+//  width: 40% !important;
+//
+//  .info {
+//
+//  }
+//
+//}
+
+//.note__item {
+//  width: 40%;
+//  margin: 5% auto 0 auto;
+//  background-color: $background-color;
+//  padding: 15px 5%;
+//  border-left: 2px solid $border-color;
+//  border-bottom: 2px solid $border-color;
+//
+//  @include flex-space-between;
+//
+//
+//  .info {
+//    width: 100%;
+//    font-size: 1.2em;
+//    color: $font-color;
+//    display: flex;
+//    flex-direction: column;
+//
+//    .name {
+//      font-weight: bold;
+//      text-decoration: underline;
+//      padding-right: 40%;
+//      margin-top: 5%;
+//    }
+//
+//    .description {
+//      padding-right: 20%;
+//      margin-top: 3.5%;
+//      font-size: 1em;
+//      color: $font-color;
+//    }
+//
+//  }
+//
+//
+//
+//  label {
+//    display: inline-block;
+//    cursor: pointer;
+//    position: relative;
+//    padding: 1.25vh;
+//    font-size: 17px;
+//    margin: 0;
+//  }
+//
+//  .checkbox {
+//    display: none;
+//  }
+//
+//  label:before {
+//    content: "";
+//    display: inline-block;
+//    position: absolute;
+//    left: 0;
+//    bottom: 1px;
+//    border: 2px solid #c4c4c4;
+//    background-color: #fff;
+//    width: 2.5vh;
+//    height: 2.5vh;
+//    border-radius: 5px;
+//  }
+//
+//  .checkbox:checked + label:before {
+//    content: "\2713";
+//    border: 2px solid #c4c4c4;
+//    width: 2.5vh;
+//    height: 2.5vh;
+//    background-color: $theme-color;
+//    color: #fff;
+//    font-weight: bold;
+//    border-radius: 5px;
+//    @include flex-center;
+//  }
+//
+//
+//}

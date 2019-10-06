@@ -1,0 +1,73 @@
+@import "../../../../../styles/partials/_params";
+@import "../../../../../styles/partials/_mixins";
+
+
+.edit-mode {
+
+  background-color: $theme-color;
+  height: $mode-edit-height;
+  color: white;
+  font-size: 1.3em;
+
+
+  .app-wrapper {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__chosen-el {
+    font-weight: bold;
+  }
+
+  .material-icons {
+    font-size: 1.5em;
+    transition-duration: .3s;
+  }
+
+  .none-chosen {
+
+    a {
+      color: white;
+      &:hover {
+        color: $hover-color;
+      }
+    }
+
+  }
+
+
+
+  .one-chosen {
+
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    align-items: center;
+
+    a {
+      color: white;
+    }
+
+    a :hover {
+      color: $hover-color;
+    }
+
+    .tools {
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+  }
+
+  .close-button {
+    cursor: pointer;
+  }
+
+}

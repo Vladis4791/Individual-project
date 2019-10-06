@@ -1,0 +1,30 @@
+@import "../../../styles/partials/params";
+@import "../../../styles/partials/mixins";
+
+.general-view {
+
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 3% 3%;
+
+  .general-buttons {
+    width: 100%;
+    color: #fff;
+    background-color: $theme-color;
+    border: none;
+    padding: 3%;
+    border-radius: 3%;
+  }
+
+  .daily-activity {
+    width: 40%;
+
+  }
+
+  .notes {
+    width: 40%;
+
+  }
+
+}

@@ -1,0 +1,42 @@
+@import "../../../../../styles/partials/_params";
+@import "../../../../../styles/partials/_mixins";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $theme-color;
+  height: $nav-height;
+  padding: 0 (100vw - $view-port) / 2;
+
+  &__logo {
+    color: white;
+    @include flex-center;
+
+  }
+
+  &__account {
+
+    @include flex-center( row );
+    width: 50%;
+
+    .name {
+      color: white;
+      font-weight: bold;
+      margin-right: 5%;
+      font-size: 16px;
+    }
+
+    .logout {
+      border: 2px solid $font-color;
+      width: 40%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      background-color: #fff;
+      color: $font-color;
+      font-weight: bold;
+    }
+
+  }
+}

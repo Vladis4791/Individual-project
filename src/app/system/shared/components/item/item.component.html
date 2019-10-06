@@ -1,0 +1,10 @@
+<label for="{{ args.id }}" class="item {{ componentName }}-item" data-id="{{ args.id }}" id="daily-task-{{ args.id }}">
+  <div class="info">
+    <div class="name">{{ args.name }}</div>
+    <div class="time" *ngIf="componentName == 'daily-activity'">{{ args.time }}</div>
+    <div class="description" *ngIf="componentName == 'notes'">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reiciendis.</div>
+  </div>
+
+  <input id="{{ args.id }}" type="checkbox" class="checkbox" #checkbox/>
+  <label for="{{ args.id }}" class="checkbox-label"></label>
+</label>

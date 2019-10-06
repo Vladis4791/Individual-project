@@ -1,0 +1,77 @@
+<div class="modal-window">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="modal-window__header modal-header">
+      <div class="modal-wrapper">
+        <h1 class="title">Предупреждение</h1>
+        <i class="material-icons close" aria-label="Close" (click)="modalRef.hide()">close</i>
+      </div>
+    </div>
+
+    <div class="modal-window__body modal-body">
+      <div class="modal-wrapper">
+        <div class="remove" *ngIf="mode == 'remove'"><p>Вы точно хотите удалить данный компонент?</p></div>
+
+
+        <div class="create" *ngIf="mode == 'create'">
+          <div class="create__name">
+            <label for="daily-task-name" class="daily-task-name-label">Наименование нового пункта</label>
+            <input
+              type="text"
+              name="name"
+              ngModel
+              #name="ngModel"
+              id="daily-task-name"
+              placeholder="Введите название"
+              class="form-control"
+            />
+          </div>
+          <div class="create__time">
+            <h1 class="title">Формат времени</h1>
+            <div class="formats">
+
+              <input class="single-time" name="time-format" type="radio" id="single-time">
+              <label for="single-time" class="time-format" id="st1"><span>9.00</span></label>
+              <input class="double-time" type="radio" name="time-format" id="double-time">
+              <label for="double-time" class="time-format"><span>9.00 - 10.00</span></label>
+              <input class="count-time" name="time-format" type="radio" id="count-time">
+              <label for="count-time" class="time-format"><span>15 минут</span></label>
+            </div>
+            <div class="write-time">
+              <input
+                type="text"
+                id="single-time-date"
+                name="time"
+                [ngModel]="1"
+                #time="ngModel"
+                class="form-control"
+              />
+              <div id="double-time-dates">
+                <input type="text" id="double-time-date-1"/>
+                <span>-</span>
+                <input type="text" id="double-time-date-2"/>
+              </div>
+              <input type="text"  id="count-time-date"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="modal-window__footer">
+      <div class="modal-wrapper">
+        <div class="not-ask-anymore">
+          <label for="not-ask-anymore-1" *ngIf="mode == 'remove'"></label>
+          <input type="checkbox" id="not-ask-anymore-1" *ngIf="mode == 'remove'">
+          <p *ngIf="mode == 'remove'">Больше не спрашивать</p>
+        </div>
+        <div class="button-groups">
+          <button type="submit" class="action-button" *ngIf="mode == 'create'">Создать</button>
+          <button type="submit" class="action-button" *ngIf="mode == 'remove'" (click)="deleteItems()">Удалить</button>
+          <button type="button" class="cancel-button" aria-label="Close" (click)="modalRef.hide()"><span aria-hidden="true">Отмена</span></button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+

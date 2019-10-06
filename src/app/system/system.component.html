@@ -1,0 +1,13 @@
+<app-menu></app-menu>
+<div class="system">
+  <app-sidebar class="sidebar"></app-sidebar>
+  <div class="view-window">
+    <div class="app-part">
+      <router-outlet></router-outlet>
+    </div>
+    <app-edit-mode [componentName]="componentName"></app-edit-mode>
+  </div>
+</div>
+
+
+

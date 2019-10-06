@@ -1,0 +1,24 @@
+@import "params";
+
+@mixin clear {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clean-list {
+  @include clear;
+  list-style: none;
+}
+
+@mixin flex-center( $dir: column ) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-space-between($align-items: center) {
+  display: flex;
+  justify-content: space-between;
+  align-items: $align-items;
+}
